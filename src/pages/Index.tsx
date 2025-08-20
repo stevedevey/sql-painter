@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Database, Play, Settings } from "lucide-react";
 
 const Index = () => {
@@ -58,9 +59,19 @@ const Index = () => {
                   <Input id="port" placeholder="1433" className="bg-muted/50" />
                 </div>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="database">Database Name</Label>
-                <Input id="database" placeholder="master" className="bg-muted/50" />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="database">Database Name</Label>
+                  <Input id="database" placeholder="master" className="bg-muted/50" />
+                </div>
+                <div className="space-y-2 flex flex-col justify-end">
+                  <div className="flex items-center space-x-2 h-10">
+                    <Checkbox id="trust-cert" defaultChecked />
+                    <Label htmlFor="trust-cert" className="text-sm font-normal">
+                      Trust Server Certificate?
+                    </Label>
+                  </div>
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
