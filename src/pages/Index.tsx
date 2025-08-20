@@ -1,8 +1,9 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";  
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Database, Play, Settings } from "lucide-react";
 
 const Index = () => {
@@ -23,6 +24,30 @@ const Index = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="connection-type">Connection Type</Label>
+                  <Select>
+                    <SelectTrigger id="connection-type" className="bg-muted/50">
+                      <SelectValue placeholder="Select connection type" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background border-border">
+                      <SelectItem value="sql-server">SQL Server</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="auth-method">Authentication Method</Label>
+                  <Select>
+                    <SelectTrigger id="auth-method" className="bg-muted/50">
+                      <SelectValue placeholder="Select authentication" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background border-border">
+                      <SelectItem value="username-password">Username / Password</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="server">Server/Host</Label>
