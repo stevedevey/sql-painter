@@ -2,6 +2,8 @@
 
 ## Overview
 A fully functional, responsive web-based SQL editor and database manager inspired by Beekeeper Studio. Starting with Microsoft SQL Server support and built with a modular, plugin-based architecture for future extensibility.
+Beekeeper Studio source code is available on GitHub URL: https://github.com/beekeeper-studio/beekeeper-studio/
+Beekeeper Studio is a cross-platform SQL editor and database manager built with Electron, Vue.js 2, and TypeScript. 
 
 ## Technology Stack
 - **Frontend**: React 18 + TypeScript
@@ -26,7 +28,10 @@ A fully functional, responsive web-based SQL editor and database manager inspire
    - Query Results (bottom/left)
 2. Implement responsive grid/flexbox layout
 3. Add basic section headers and placeholders
-4. Position Lovable badge in bottom right corner
+4. Add proper horizontal and vertical scrollbars to both Editor and Results panes
+5. Ensure SQL editor supports text overflow scrolling and results table has full content scrolling with minimum column widths.
+6. Position Lovable badge in bottom right corner
+7. Modern glassmorphism design, Colors: Deep database blues with electric accents
 
 ### Dependencies: None
 ### Technologies: React, Tailwind CSS, Shadcn/ui components
